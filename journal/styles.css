@@ -1,0 +1,78 @@
+/* Add a black background color to the top navigation */
+.topnavigation {
+    overflow: hidden;
+    word-spacing: 7px;
+    font-family: "semplicitapro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:small;
+}
+  
+.topnavigation a {
+    margin-left: 15px;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+
+}
+
+.topnavigation a:hover {
+    color: rgb(84, 120, 236);
+}
+  
+ 
+
+body{
+    background-color: rgb(20, 20, 20);
+    color: rgb(222, 222, 222);
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    
+}
+
+
+h1{
+    margin-left: 15px;
+    font-family: "roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h2{
+    font-family: "roboto", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+h3{
+    margin-left: 15px;
+    word-spacing: 10px;
+    font-family: "semplicitapro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:small;
+}
+
+p {
+    font-family: "semplicitapro", sans-serif;
+font-weight: 400;
+font-style: normal;
+line-height: 19px;
+}
+
+date{
+    font-family: "roboto", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+
+.column1 {
+  
+    float: right;
+    width: 50%;
+    padding-right: 4%;
+  }
