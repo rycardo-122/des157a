@@ -1,0 +1,58 @@
+
+  
+ 
+
+body{
+    background-color: rgb(244, 224, 112);
+    color: rgb(248, 82, 82);
+    font-family: "espiritu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 25px;
+    }
+
+h1{
+    font-family: "espiritu-expanded", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }   
+
+h2{
+    font-family: "espiritu-expanded", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    }
+
+h3{
+    margin-right: 15px;
+    word-spacing: 10px;
+    font-family: "semplicitapro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:small;
+    }
+
+.column1 {
+    float: right;
+    width: 50%;
+    padding-right: 10%;
+    }
+
+.column2 {
+    float: left;
+    width: 50%;
+    padding-left: 10%;
+  }
+
+  .container {
+    position: relative;
+    text-align: center;
+    color: rgb(248, 82, 82); 
+  }
+
+  .centered {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
