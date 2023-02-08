@@ -25,8 +25,8 @@
  
 
 body{
-    background-color: rgb(20, 20, 20);
-    color: rgb(222, 222, 222);
+    background-color: rgb(38, 38, 38);
+    color: rgb(244, 244, 244);
     font-family: "roboto", sans-serif;
     font-weight: 400;
     font-style: italic;
@@ -39,12 +39,15 @@ h1{
     font-family: "roboto", sans-serif;
     font-weight: 700;
     font-style: normal;
+
 }
 
 h2{
     font-family: "roboto", sans-serif;
     font-weight: 400;
     font-style: italic;
+    color: rgb(171, 187, 246);
+
 }
 
 h3{
@@ -60,7 +63,7 @@ p {
     font-family: "semplicitapro", sans-serif;
 font-weight: 400;
 font-style: normal;
-line-height: 19px;
+line-height: 28px;
 }
 
 date{
@@ -73,6 +76,13 @@ date{
 .column1 {
   
     float: right;
+    width: 50%;
+    padding-right: 4%;
+  }
+
+  .column2 {
+  
+    float: left;
     width: 50%;
     padding-right: 4%;
   }

@@ -7,23 +7,29 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/ezt4pat.css">
     <link rel="stylesheet" href="https://use.typekit.net/ezt4pat.css">    <title>Mad Libs</title
+      <script src="script.js" defer></script>
 
 </head>
 <body>
-    <article class="column2">
-    
-        <div>
-            <img src="images/dude1.png" alt="Girl in a jacket" width="500" height="600">
-        </div>
-    </article>
-
-<div class="top">
+  <header>
+    <div class="top">
+      <div>
+          <h3>
+              Ricardo Garcia //     DES 157 
+  
+          </h3>
+      </div>
+  </header>
+  <article class="column2">
     <div>
-        <h3>
-            Ricardo Garcia //     DES 157 
-
-        </h3>
+        <img src="images/dude1.png" alt="dude1" width="500" height="600">
     </div>
+</article>
+  
+ 
+
+    
+
 
 
    
@@ -36,66 +42,74 @@
         </div>
 
 
-        <p>
-          You woke up feeling 
-           <form method="post" action="processor.php">
-           <input type="text" name="fname" if="fname" value="adjective">
-         
-           and wanted to eat some  
-           <form method="post" action="processor.php">
-           <input type="text" name="fname" if="fname" value="Noun">
-         . However the      
-           <form method="post" action="processor.php">
-           <input type="text" name="fname" if="fname" value="Noun">
-             that you ate made you feel 
-           <form method="post" action="processor.php">
-           <input type="text" name="fname" if="fname" value="adjective">
-             and you 
-             <form method="post" action="processor.php">
-            <input type="text" name="fname" if="fname" value="Verb">
-              back into bed. A few hours later you woke up and 
-              <form method="post" action="processor.php">
-                <input type="text" name="fname" if="fname" value="adjective">
-              looked into the mirror. To your surpise your hair was 
-              <select name="Color" id="Color">
-                <option value="American">Red</option>
-                <option value="Swiss">Blue</option>
-                <option value="Brief">Pink</option>
-            </select>
-              and your face was [adjective]. You instantly called your 
-              <form method="post" action="processor.php">
-                <input type="text" name="fname" if="fname" value="plural noun">
-              to tell them the news. To your surprise 
-              <form method="post" action="processor.php">
-                <input type="text" name="fname" if="fname" value="name">
-              , 
-              <form method="post" action="processor.php">
-                <input type="text" name="fname" if="fname" value="name">
-              , and 
-              <form method="post" action="processor.php">
-                <input type="text" name="fname" if="fname" value="name">
-               also woke up feeling 
+        <main>
+          <form id="myform">
+      
+           
+            <p>
+              You woke up feeling 
+              <label for="noun1">(Provide an adjective)</label>
+              <input type="text" id="adj">
+             
+               and wanted to eat some  
                <form method="post" action="processor.php">
-                <input type="text" name="fname" if="fname" value="adjective">
-               . 
+               <input type="text" name="fname" if="fname" value="Noun">
+             . However the      
                <form method="post" action="processor.php">
-                <input type="text" name="fname" if="fname" value="exclamation">
-                you shouted out as you realized everyone 
-                <form method="post" action="processor.php">
-                    <input type="text" name="fname" if="fname" value="adverb">
-                turned into a cartoon. You were 
-                <form method="post" action="processor.php">
-                    <input type="text" name="fname" if="fname" value="adjective"> 
-                that your new look was 
-                <form method="post" action="processor.php">
+               <input type="text" name="fname" if="fname" value="Noun">
+                 that you ate made you feel 
+               <form method="post" action="processor.php">
+               <input type="text" name="fname" if="fname" value="adjective">
+                 and you 
+                 <form method="post" action="processor.php">
+                <input type="text" name="fname" if="fname" value="Verb">
+                  back into bed. A few hours later you woke up and 
+                  <form method="post" action="processor.php">
                     <input type="text" name="fname" if="fname" value="adjective">
-                 and you went on with your day.
+                  looked into the mirror. To your surpise your hair was 
+                  <select name="Color" id="Color">
+                    <option value="American">Red</option>
+                    <option value="Swiss">Blue</option>
+                    <option value="Brief">Pink</option>
+                </select>
+                  and your face was [adjective]. You instantly called your 
+                  <form method="post" action="processor.php">
+                    <input type="text" name="fname" if="fname" value="plural noun">
+                  to tell them the news. To your surprise 
+                  <form method="post" action="processor.php">
+                    <input type="text" name="fname" if="fname" value="name">
+                  , 
+                  <form method="post" action="processor.php">
+                    <input type="text" name="fname" if="fname" value="name">
+                  , and 
+                  <form method="post" action="processor.php">
+                    <input type="text" name="fname" if="fname" value="name">
+                   also woke up feeling 
+                   <form method="post" action="processor.php">
+                    <input type="text" name="fname" if="fname" value="adjective">
+                   . 
+                   <form method="post" action="processor.php">
+                    <input type="text" name="fname" if="fname" value="exclamation">
+                    you shouted out as you realized everyone 
+                    <form method="post" action="processor.php">
+                        <input type="text" name="fname" if="fname" value="adverb">
+                    turned into a cartoon. You were 
+                    <form method="post" action="processor.php">
+                        <input type="text" name="fname" if="fname" value="adjective"> 
+                    that your new look was 
+                    <form method="post" action="processor.php">
+                        <input type="text" name="fname" if="fname" value="adjective">
+                     and you went on with your day.
+                     <input type="submit" value="Create Madlib!">
+       
+      
+            </p>
+      
+          </form>
+          <article id="madlib"></article>
+        </main>
 
-   
-         </form>
-        </p>
-
-
+</article>
     
   
    
