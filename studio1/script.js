@@ -7,6 +7,10 @@
 
     myForm.addEventListener('submit', function(event){
         event.preventDefault();
+
+
+
+        
         const noun1 = document.querySelector('#noun1').value;
         const noun2 = document.querySelector('#noun2').value;
         const adj = document.querySelector('#adj').value;
