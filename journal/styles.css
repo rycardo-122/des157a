@@ -1,28 +1,3 @@
-/* Add a black background color to the top navigation */
-.topnavigation {
-    overflow: hidden;
-    word-spacing: 7px;
-    font-family: "semplicitapro", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size:small;
-}
-  
-.topnavigation a {
-    margin-left: 15px;
-    color: #f2f2f2;
-    text-align: center;
-    text-decoration: none;
-    font-size: 14px;
-    display: inline-block;
-
-}
-
-.topnavigation a:hover {
-    color: rgb(84, 120, 236);
-}
-  
- 
 
 body{
     background-color: rgb(38, 38, 38);
