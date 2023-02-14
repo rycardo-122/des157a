@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/ezt4pat.css">
-  <title>Mad Libs</title
+  <title>Mad Libs</title>
       <script src="script.js" defer></script>
 
 </head>
@@ -15,11 +15,8 @@
     <img src="images/dude1.png" alt="dude1" width="500" height="600">
   </header>
 
-
-
 <main class="column2">
   <div class="logolayout">
-
   
   <div class="container">
     <img src="images/cloud_1.png" alt="cloud" width="300" height="100">
@@ -27,41 +24,43 @@
   </div>
   
 
-        <section class="box2">
-          <form id="myForm
-          ">
-            <label for="noun">Noun
+        <section class="box2" id="page1">
+          <form id="myForm">
+
+            <label for="adj">adjective
             </label><br>
-            <input type="text" id="noun"><br>
-            <label for="noun">adjective
+            <input type="text" id="adj"><br>
+
+            <label for="Noun1">Noun (plural)
             </label><br>
-            <input type="text" id="noun"><br>
-            <label for="noun">Verb
+            <input type="text" id="noun1"><br>
+
+            <label for="Verb">Adverb
             </label><br>
-            <input type="text" id="noun"/><br>
-            <label for="noun">adverb
+            <input type="text" id="verb"><br>
+
+            <label for="noun2">Noun (Color)
             </label><br>
-            <input type="text" id="noun"><br>
-            <label for="noun">Noun
-            </label><br>
-            <input type="text" id="noun"><br>
+            <input type="text" id="noun2"><br>
      
-            <input type="submit" class="button">
+            <input type="submit" class="button" id="submit">
 
           </form>
         </section>
       </div>
 
+      <section class="page2" id="page2">
+        <p>
+          You woke up feeling  <span id="adjfill"></span> and wanted to eat some  <span id="nounfill"></span>. However what you ate made you feel sick and you went back into bed. A few hours later you woke up and <span id="verbfill"></span> looked into the mirror. To your surprise your hair was  <span id="noun2fill"></span> and your face was drawn out like a cartoon. You instantly called your friends to tell them the news. To your surprise your friends also woke up looking like cartoon characters. 
+       </p>
+      </section>
 
       <section class="output">
-<div id="myText">
-</div>
+        <div id="myText"></div>
       </section>
 
        
   </main>
-    
-  
   
    
 </body>

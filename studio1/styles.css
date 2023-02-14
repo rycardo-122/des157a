@@ -1,7 +1,4 @@
 
-  
- 
-
 body{
     background-color: rgb(244, 224, 112);
     color: rgb(255, 255, 255);
@@ -61,7 +58,6 @@ h3{
     left: 50%;
     transform: translate(-50%, -50%);
   }
- 
 
   .box2 {
     height: 350px;
@@ -70,21 +66,21 @@ h3{
     border-radius: 20px;
     display: flex;
     flex-direction: column;
+    
   }
   section{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    box-shadow: 10px 10px;
-
+    box-shadow: 5px 10px #000000;
   }
 
   input{
     border-radius: 20px;
     width: 80;
     height: 20px;
-    border: none;
+    border: solid;
     background-color: rgb(244, 224, 112);
   }
 
@@ -96,7 +92,11 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center;   
+  }
 
-   
+  .page2 {
+    display: none;
+    background-color: rgb(113, 191, 233);
+    border-radius: 15px;
   }
