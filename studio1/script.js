@@ -3,7 +3,7 @@
     console.log('reading js');
 
      const myForm = document.querySelector('#myform');
-    const madlib = document.querySelector('#madlib');
+     const madlib = document.querySelector('#madlib');
 
     document.querySelector('#submit').addEventListener('click', function(event){
         event.preventDefault();
