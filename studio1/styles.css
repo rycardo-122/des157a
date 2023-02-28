@@ -48,7 +48,7 @@ h3{
 
   .container {
     position: relative;
-    text-align: center;
+    /* text-align: center; */
     color: rgb(0, 0, 0); 
   }
 
@@ -61,27 +61,31 @@ h3{
 
   .box2 {
     height: 350px;
-    width: 70%;
+    width: 80%;
     background-color: rgb(104, 104, 104);
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     
   }
   section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center;
+    justify-content: space-around; */
     box-shadow: 5px 10px #000000;
   }
-
+label, input{
+  display: block;
+}
   input{
     border-radius: 20px;
-    width: 80PX;
+    /* width: 80PX; */
     height: 20px;
+    width:100%;
     border: solid;
     background-color: rgb(244, 224, 112);
+    margin-bottom: 10px;
   }
 
   .button{
