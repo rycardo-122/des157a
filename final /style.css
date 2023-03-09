@@ -118,7 +118,7 @@ h1{
     font-family: 'Courier New', Courier, monospace;
     margin:0;
     padding:20px;
-    width:560px;
+    width:50%;
     height: 579px;
     background-color:#d9d9d9;
     position: absolute;
@@ -130,11 +130,13 @@ h1{
     top:100px;
     right:100px;
     color:white;
-    font-size: 1.5em;
+    font-size: 2.5em;
 }
 
 .hidden{
     display:none;
+
+
 }
 
 .showing {
@@ -142,4 +144,16 @@ h1{
     top:0;
     left:0;
     display:flex;
+}
+
+.description {
+   text-align: left;
+}
+
+.fullimage {
+margin-right: 20%;
+}
+
+p {
+    width:auto;
 }
