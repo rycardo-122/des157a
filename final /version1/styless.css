@@ -31,6 +31,7 @@ body {
     border: solid;
     margin-top: 110px;
     float: right;
+    padding: 3%;
 }
 
 .square3 {
@@ -40,7 +41,6 @@ body {
     border: solid;
     float: right;
     margin-top: -528.5px;
-
 }
 .fullimage{
     border-color: black;
@@ -52,18 +52,24 @@ body {
 .close{
     position:absolute;
     top:120px;
-    right:50px;
+    right:20%;
     color:rgb(0, 0, 0);
     font-size: 1.7em;
 }
 
 .innertitle {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "new-order", sans-serif;
+    font-size: 60px;
+    font-style: normal;
     text-align: center;
-    margin-top: 51px;
+    margin-top: 30px;    
+    padding-left: 10px;
+
 }
 
 p {
     font-family: 'Courier New', Courier, monospace;
-    text-align: center;
+    text-align: left;
+    line-height: 25px;
+    margin-top: 51px;    
 }
