@@ -214,3 +214,55 @@ p {
 .latext{
     margin-top: 3%;  
 }
+
+
+#slide1 {
+	top: -200px;
+	left: 20%;
+	transform: translateX(-50%);
+	transition: opacity .5s;
+    position:absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(255, 210, 193);
+}
+
+#slide2 {
+	top: -200px;
+	left: 70%;
+	transform: translateX(-50%);
+	transition: opacity .5s;
+    position:absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgb(255, 210, 193);
+}
+
+#slide3 {
+	top: -200px;
+	left: 90%;
+	transform: translateX(-50%);
+	transition: opacity .5s;
+    position:absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: rgb(255, 210, 193);
+}
+
+.fadeout {
+	opacity: 0;
+}
+.fadein {
+	opacity: 1;
+}
+
+.moveout{
+  right:-200px;
+}
+
+.movein{
+  right:50%;
+}
