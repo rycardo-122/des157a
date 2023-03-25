@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.typekit.net/gob0rjy.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of PIG</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <section class="topsection">
+        <h1 class="cat"> GAME OF CAT</h1>
+        <section class="overlay">
+            <div class="instructions">
+                <p>There are two players. The player whose turn it is rolls the dice. The total of the roll is added to the current player's score, unless either die comes up as a "one". If this happens, this player's turn is over, and it is the other player’s turn. After each roll, the current player can either roll again, (assuming a "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.</p> 
+                <p>Oh, and if you roll two "ones" (snake eyes), your current score gets zeroed out. So don’t do that.</p>
+
+            </div>
+            <div class="start-quit">
+                <div id="gamecontrol">
+                    <button id="startgame">Start the Game</button>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="leftcat"> 
+        <img src="images/cat1.svg"  width="200" height="300">
+
+    </section>
+
+    <section class="rightcat">
+        <img src="images/cat2.svg"  width="200" height="300">
+    </section>
+
+    <section class="bottomsection">
+
+        <section id="score">
+            <div id="score"></div>
+        </section>
+
+        <div id="actions"></div>
+
+        <div id="game"></div>
+    </section>
+
+    <script>
+        var startGame = document.getElementById('startgame');
+        var gameControl = document.getElementById('gamecontrol');
+        var game = document.getElementById('game');
+        var score = document.getElementById('score');
+        var actionArea = document.getElementById('actions');
+        var gameData = {
+            dice: ['1die.svg', '2die.svg', '3die.svg', '4die.svg', '5die.svg', '6die.svg'],
+            players: ['player 1', 'player 2'],
+            score: [0,0],
+            roll1: 0,
+            roll2: 0,
+            rollSum: 0,
+            index: 0,
+            gameEnd: 29,
+        };
+
+
+        
+
+        startGame.addEventListener("click", function (){
+            gameData.index = Math.round(Math.random());
+            console.log(gameData.index);
+            gameControl.innerHTML = '<h2></h2>';
+            gameControl.innerHTML += '<button id="quit">Wanna Quit?</button>';
+
+            document.getElementById('quit').addEventListener("click", function(){
+                location.reload();
+            });
+
+            setUpTurn();
+        })
+
+        function setUpTurn() {
+            game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
+            actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
+            document.getElementById('roll').addEventListener('click', function(){
+                
+                console.log("roll the dice!");
+                throwDice();
+                
+            });
+        }
+
+        function throwDice(){
+            actionArea.innerHTML = '';
+            gameData.roll1 = Math.floor(Math.random() * 6) + 1;
+            gameData.roll2 = Math.floor(Math.random() * 6) + 1;
+            game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
+            game.innerHTML += `<img src="${gameData.dice[gameData.roll1-1]}">
+                                <img src="${gameData.dice[gameData.roll2-1]}">`;
+            gameData.rollSum = gameData.roll1 + gameData.roll2;
+            // gameData.rollSum = 2;
+            
+            if (gameData.rollSum === 2){
+                game.innerHTML += `<p>Oh Snap! Snake Eyes!</p>`;
+                gameData.score[gameData.index] = 0;
+                //switch players
+                gameData.index ? (gameData.index= 0) : (gameData.index = 1);
+                setTimeout(setUpTurn, 2000);
+                console.log("snake eyes were rolled");
+                
+            }
+            
+            //if either die is a 1
+            else if(gameData.roll1 === 1 || gameData.roll2 === 1){
+                // console.log("one of the two dice was a 1");
+                gameData.index ? (gameData.index= 0) : (gameData.index = 1);
+                game.innerHTML += `<p>Sorry, one of your rolls was a one, swithcing to ${
+                    gameData.players[gameData.index]
+                }</p>`;
+                setTimeout(setUpTurn, 2000);
+            }
+
+            
+
+            //if neither die is a 1...
+            else {
+                // console.log("the game proceeds");
+                gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
+                actionArea.innerHTML = `<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>`;
+
+                document.getElementById('pass').addEventListener('click', function () {
+                    setUpTurn();
+                });
+                document.getElementById('pass').addEventListener('click', function () {
+                    gameData.index ? (gameData.index = 0) : (gameData.index = 1);
+                    setUpTurn();
+                });
+            }
+
+            checkWinningCondition();
+
+        }
+
+        function checkWinningCondition(){
+            if(gameData.score[gameData.index] > gameData.gameEnd){
+                score.innerHTML = `<h2>${gameData.players[gameData.index]}
+                wins with ${gameData.score[gameData.index]} points! </h2>`;
+
+                actionArea.innerHTML = '';
+                document.getElementById('quit').innerHTML = "Start A New Game";
+            }
+            else{
+                //show current score...
+                score.innerHTML = `<p>The score is currently <strong> ${gameData.players[0]}
+                ${gameData.score[0]}</strong> and <strong>${gameData.players[1]}
+                ${gameData.score[1]}</strong></p>`;
+            }
+        }
+
+        function showCurrentScore() {
+            score.innerHTML = `<p>The score is currently<strong>${gameData.players[0]}
+                ${gameData.score[0]}</strong> and <strong>${gameData.players[1]}
+                ${gameData.score[1]}</strong></p>`;
+        }
+    </script>
+</body>
+</html>
